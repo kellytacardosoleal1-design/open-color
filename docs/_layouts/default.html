@@ -51,6 +51,17 @@
 </head>
 
 <body>
+  <script>
+    var params = new URLSearchParams(window.location.search);
+    if (params.get("logado") === "true") {
+      sessionStorage.setItem("oc_logado", "true");
+      window.history.replaceState({}, document.title, "/");
+    }
+    if (!sessionStorage.getItem("oc_logado")) {
+      window.location.href = "/login.html";
+    }
+  </script>
+
   <div class="navigation">
     <div class="container">
       <a class="blog-logo" href="{{ site.baseurl }}/"></a>
@@ -128,15 +139,6 @@
   <div class="container">
     {{ content }}
   </div>
-
-  <body>
-
-    <body>
-      <script>
-        if (!localStorage.getItem("oc_logado")) {
-          window.location.href = "/login.html";
-        }
-      </script>
-    </body>
+</body>
 
 </html>
