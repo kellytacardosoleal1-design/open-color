@@ -3,6 +3,13 @@ var blocoCadastro = document.getElementById("bloco-cadastro");
 var caixaErro = document.getElementById("mensagem-erro");
 var caixaSucesso = document.getElementById("mensagem-sucesso");
 
+// Função de redirecionamento — pode ser sobrescrita em testes
+window.redirecionar =
+  window.redirecionar ||
+  function (url) {
+    window.location.assign(url);
+  };
+
 document
   .getElementById("link-ir-cadastro")
   .addEventListener("click", function (e) {
@@ -73,7 +80,7 @@ document
     var usuarios = JSON.parse(localStorage.getItem("usuarios_projeto")) || [];
 
     if (emailDigitado === "admin@email.com" && senhaDigitada === "123456") {
-      window.location.href = "/?logado=true";
+      window.redirecionar("/?logado=true");
       return;
     }
 
@@ -89,7 +96,7 @@ document
     }
 
     if (contaValida) {
-      window.location.href = "/?logado=true";
+      window.redirecionar("/?logado=true");
     } else {
       caixaErro.innerText = "Email ou senha incorretos.";
       caixaErro.style.display = "block";
