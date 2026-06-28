@@ -22,7 +22,7 @@ jobs:
         node-version: '20'
 
     - name: Instalar dependências
-      run: npm install
+      run: npm install --ignore-scripts
 
     # Executa os testes gerando a cobertura exigida de 85% para o professor
     - name: Executar testes com cobertura
