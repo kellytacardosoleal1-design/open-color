@@ -15,6 +15,7 @@
   ],
   "scripts": {
     "test": "jest --coverage --coverageReporters=lcov",
+    "sonar": "sonar-scanner",
     "test-typescript": "tsc open-color.d.ts tests/typescript.ts --noEmit",
     "compile-templates": "node compile-templates.js",
     "prepare": "npm run compile-templates",
@@ -46,6 +47,7 @@
     "jest": "^30.4.2",
     "jest-environment-jsdom": "^30.4.1",
     "jest-location-mock": "^4.0.1",
+    "sonarqube-scanner": "^4.3.8",
     "typescript": "^2.9.2",
     "uuid": "^3.3.2"
   },
