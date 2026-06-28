@@ -3,5 +3,5 @@ projectKey=magaly8020_open-color-teste-lyan
 serverUrl=https://sonarcloud.io
 serverVersion=8.0.0.93576
 dashboardUrl=https://sonarcloud.io/dashboard?id=magaly8020_open-color-teste-lyan
-ceTaskId=AZ8LvEN8cKSByF-xf2_j
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZ8LvEN8cKSByF-xf2_j
+ceTaskId=AZ8NJ39AXPo8VlEUQqxD
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZ8NJ39AXPo8VlEUQqxD
