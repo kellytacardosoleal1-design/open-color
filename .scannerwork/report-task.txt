@@ -1,7 +1,7 @@
-organization=magaly8020
-projectKey=magaly8020_open-color-teste-lyan
+organization=kellytacardosoleal1-design
+projectKey=kellytacardosoleal1-design_open-color
 serverUrl=https://sonarcloud.io
 serverVersion=8.0.0.93576
-dashboardUrl=https://sonarcloud.io/dashboard?id=magaly8020_open-color-teste-lyan
-ceTaskId=AZ8NJ39AXPo8VlEUQqxD
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZ8NJ39AXPo8VlEUQqxD
+dashboardUrl=https://sonarcloud.io/dashboard?id=kellytacardosoleal1-design_open-color
+ceTaskId=AZ8OzfGRbX-7_bk837Kz
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZ8OzfGRbX-7_bk837Kz
