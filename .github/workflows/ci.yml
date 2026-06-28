@@ -31,6 +31,6 @@ jobs:
 
     # Dispara a análise do Sonar integrado ao pipeline de forma oficial
     - name: Análise do SonarCloud
-      uses: SonarSource/sonarqube-scan-action@8.2.0
+      uses: SonarSource/sonarqube-scan-action@v8
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
