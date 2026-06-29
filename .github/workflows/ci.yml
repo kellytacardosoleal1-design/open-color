@@ -22,7 +22,7 @@ jobs:
         node-version: '20'
 
     - name: Instalar dependências
-      run: npm install --ignore-scripts
+      run: npm ci --ignore-scripts
 
     # Executa os testes gerando a cobertura exigida de 85% para o professor
     - name: Executar testes com cobertura
@@ -31,6 +31,6 @@ jobs:
 
     # Dispara a análise do Sonar integrado ao pipeline de forma oficial
     - name: Análise do SonarCloud
-      uses: SonarSource/sonarqube-scan-action@v8
+      uses: SonarSource/sonarqube-scan-action@7006c4492b2e0ee0f816d36501671557c97f5995
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
