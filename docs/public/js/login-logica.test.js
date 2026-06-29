@@ -3,7 +3,7 @@
  */
 
 describe("Fluxo Completo do Sistema de Login e Cadastro", () => {
-  let blocoLogin, blocoCadastro, caixaErro;
+  let blocoLogin, /*blocoCadastro,*/ caixaErro;
   const mockRedirecionar = jest.fn();
 
   beforeAll(() => {
@@ -25,7 +25,7 @@ describe("Fluxo Completo do Sistema de Login e Cadastro", () => {
     require("./login-logica.js");
 
     blocoLogin = document.getElementById("bloco-login");
-    blocoCadastro = document.getElementById("bloco-cadastro");
+    /*blocoCadastro = document.getElementById("bloco-cadastro");*/
     caixaErro = document.getElementById("mensagem-erro");
   });
 

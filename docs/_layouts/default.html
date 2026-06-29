@@ -52,13 +52,13 @@
 
 <body>
   <script>
-    var params = new URLSearchParams(window.location.search);
+    var params = new URLSearchParams(globalThis.location.search);
     if (params.get("logado") === "true") {
       sessionStorage.setItem("oc_logado", "true");
-      window.history.replaceState({}, document.title, "/");
+      globalThis.history.replaceState({}, document.title, "/");
     }
     if (!sessionStorage.getItem("oc_logado")) {
-      window.location.href = "/login.html";
+      globalThis.location.href = "/login.html";
     }
   </script>
 
