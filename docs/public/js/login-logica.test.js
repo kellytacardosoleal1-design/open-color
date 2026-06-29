@@ -7,8 +7,8 @@ describe("Fluxo Completo do Sistema de Login e Cadastro", () => {
   const mockRedirecionar = jest.fn();
 
   beforeAll(() => {
-    // Sobrescreve ANTES de carregar o script — sem tocar no window.location
-    window.redirecionar = mockRedirecionar;
+    // Sobrescreve ANTES de carregar o script — sem tocar no globalThis.location
+    globalThis.redirecionar = mockRedirecionar;
 
     document.body.innerHTML = `
       <div id="bloco-login"></div>
