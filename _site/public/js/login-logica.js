@@ -4,10 +4,10 @@ var caixaErro = document.getElementById("mensagem-erro");
 var caixaSucesso = document.getElementById("mensagem-sucesso");
 
 // Função de redirecionamento — pode ser sobrescrita em testes
-window.redirecionar =
-  window.redirecionar ||
+globalThis.redirecionar =
+  globalThis.redirecionar ||
   function (url) {
-    window.location.assign(url);
+    globalThis.location.assign(url);
   };
 
 document
@@ -79,15 +79,15 @@ document
     var usuarios = JSON.parse(localStorage.getItem("usuarios_projeto")) || [];
 
     if (emailDigitado === "admin@email.com" && senhaDigitada === "123456") {
-      window.redirecionar("/?logado=true");
+      globalThis.redirecionar("/?logado=true");
       return;
     }
 
     var contaValida = null;
     for (const usuario of usuarios) {
       if (
-        usuarios[i].email === emailDigitado &&
-        usuarios[i].senha === senhaDigitada
+        usuario.email === emailDigitado &&
+        usuario.senha === senhaDigitada
       ) {
         contaValida = usuario;
         break;
@@ -95,7 +95,7 @@ document
     }
 
     if (contaValida) {
-      window.redirecionar("/?logado=true");
+      globalThis.redirecionar("/?logado=true");
     } else {
       caixaErro.innerText = "Email ou senha incorretos.";
       caixaErro.style.display = "block";
