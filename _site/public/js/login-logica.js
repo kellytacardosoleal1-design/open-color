@@ -1,7 +1,7 @@
-var blocoLogin = document.getElementById("bloco-login");
-var blocoCadastro = document.getElementById("bloco-cadastro");
-var caixaErro = document.getElementById("mensagem-erro");
-var caixaSucesso = document.getElementById("mensagem-sucesso");
+let blocoLogin = document.getElementById("bloco-login");
+let blocoCadastro = document.getElementById("bloco-cadastro");
+let caixaErro = document.getElementById("mensagem-erro");
+let caixaSucesso = document.getElementById("mensagem-sucesso");
 
 // Função de redirecionamento — pode ser sobrescrita em testes
 globalThis.redirecionar =
@@ -37,12 +37,12 @@ document
     caixaErro.style.display = "none";
     caixaSucesso.style.display = "none";
 
-    var email = document.getElementById("cad-email").value.trim();
-    var senha = document.getElementById("cad-senha").value;
+    let email = document.getElementById("cad-email").value.trim();
+    let senha = document.getElementById("cad-senha").value;
 
-    var usuarios = JSON.parse(localStorage.getItem("usuarios_projeto")) || [];
+    let usuarios = JSON.parse(localStorage.getItem("usuarios_projeto")) || [];
 
-    var usuarioExiste = false;
+    let usuarioExiste = false;
     for (let i = 0; i<usuarios.length && usuarioExiste===false; i++) {
       if (usuarios[i].email === email) {
         usuarioExiste = true;
@@ -73,17 +73,17 @@ document
     caixaErro.style.display = "none";
     caixaSucesso.style.display = "none";
 
-    var emailDigitado = document.getElementById("login-email").value.trim();
-    var senhaDigitada = document.getElementById("login-senha").value;
+    let emailDigitado = document.getElementById("login-email").value.trim();
+    let senhaDigitada = document.getElementById("login-senha").value;
 
-    var usuarios = JSON.parse(localStorage.getItem("usuarios_projeto")) || [];
+    let usuarios = JSON.parse(localStorage.getItem("usuarios_projeto")) || [];
 
     if (emailDigitado === "admin@email.com" && senhaDigitada === "123456") {
       globalThis.redirecionar("/?logado=true");
       return;
     }
 
-    var contaValida = null;
+    let contaValida = null;
     for (const usuario of usuarios) {
       if (
         usuario.email === emailDigitado &&
