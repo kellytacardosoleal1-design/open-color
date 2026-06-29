@@ -43,10 +43,9 @@ document
     var usuarios = JSON.parse(localStorage.getItem("usuarios_projeto")) || [];
 
     var usuarioExiste = false;
-    for (var i = 0; i < usuarios.length; i++) {
+    for (let i = 0; i<usuarios.length && usuarioExiste===false; i++) {
       if (usuarios[i].email === email) {
         usuarioExiste = true;
-        break;
       }
     }
 
@@ -85,12 +84,12 @@ document
     }
 
     var contaValida = null;
-    for (var j = 0; j < usuarios.length; j++) {
+    for (const usuario of usuarios) {
       if (
-        usuarios[j].email === emailDigitado &&
-        usuarios[j].senha === senhaDigitada
+        usuarios[i].email === emailDigitado &&
+        usuarios[i].senha === senhaDigitada
       ) {
-        contaValida = usuarios[j];
+        contaValida = usuario;
         break;
       }
     }
