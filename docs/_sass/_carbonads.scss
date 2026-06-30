@@ -12,6 +12,8 @@
 }
 
 .carbon-text {
+  display: block;
+  text-align: left;
   color: $oc-gray-6;
   transition: all .2s ease-out;
 
@@ -19,6 +21,13 @@
   &:focus,
   &:active {
     color: $text-color;
+  }
+
+  @media (max-width: 543px) {
+    display: inline-block;
+    width: calc(100% - 130px);
+    padding-left: 20px;
+    vertical-align: top;
   }
 }
 
@@ -38,18 +47,6 @@
   @media (max-width: 543px) {
     display: inline-block;
     margin-bottom: 0;
-  }
-}
-
-.carbon-text {
-  display: block;
-  text-align: left;
-
-  @media (max-width: 543px) {
-    display: inline-block;
-    width: calc(100% - 130px);
-    padding-left: 20px;
-    vertical-align: top;
   }
 }
 
